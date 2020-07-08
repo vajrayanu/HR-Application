@@ -1,0 +1,116 @@
+﻿.fc-left {
+    margin-left: 10px;
+}
+
+.fc-right {
+    display: none;
+}
+
+.fc-content {
+    cursor: pointer;
+}
+
+.fc-toolbar {
+    background-color: #E6313D;
+    margin-bottom: 0px !important;
+    color: white;
+    padding-top: 1rem;
+    padding-bottom: .5rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.fc-center > h2 {
+    font-size: 24px !important;
+}
+
+.circlewhite {
+    float: left;
+    margin-top: -2px;
+    margin-left: -2px;
+    margin-right: 5px;
+    background-color: white;
+    width: 10px;
+    border-radius: 5px;
+    height: 10px;
+}
+
+.ui-widget-header {
+    background: #eee !important;
+    border: unset !important;
+}
+
+.ibox .ui-widget-content {
+    border: unset !important;
+}
+
+.fc-day-header {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    font-size: 14px !important;
+}
+
+.fc-content {
+    padding: 5px;
+}
+
+.ibox .ui-state-highlight,
+.ibox .ui-widget-content .ui-state-highlight,
+.ibox .ui-widget-header .ui-state-highlight {
+    background: #eee !important;
+}
+
+.fc-row .fc-content-skeleton td,
+.fc-row .fc-helper-skeleton td {
+    border: 0 !important;
+}
+
+.fc th,
+.fc td {
+    border: 1px solid #ccc !important;
+}
+
+.fc-scroller.fc-day-grid-container,
+.fc-scroller {
+    overflow: unset !important;
+    height: auto !important;
+}
+
+.fc-ltr .fc-basic-view .fc-day-number {
+    border-left: unset !important;
+}
+
+.fc-day-top.fc-today.ui-state-highlight {
+    border-left: 1px solid #ccc !important;
+    border-top: 1px solid #ccc !important;
+}
+
+table.fc-list-table tbody tr.fc-list-item {
+border: 1px solid #ccc !important;
+}
+
+table.fc-list-table tbody tr.fc-list-item td {
+    border: unset !important;
+}
+
+.events-gridview .tribe-events-tooltip {
+    display: none !important;
+}
+
+.blockUI {
+    z-index: 9999999 !important;
+}
+
+.delete i {
+    cursor: pointer;
+}
+
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 700px !important;
+        margin: 1.75rem auto;
+    }
+}
+
+
+

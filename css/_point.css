@@ -1,0 +1,33 @@
+﻿@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 700px !important;
+        margin: 1.75rem auto;
+    }
+}
+
+.fas{
+    cursor:pointer;
+}
+
+.blockUI {
+    z-index: 9999999 !important;
+}
+
+.none{
+    display:none;
+}
+
+.active{
+    color:green;
+}
+
+.inactive{
+    color:red;
+}
+
+.head_point {
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #ddd;
+    padding: 5px 5px;
+}
