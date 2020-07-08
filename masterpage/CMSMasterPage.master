@@ -1,0 +1,117 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="CMSMasterPage.master.cs" Inherits="masterpage_CMSMasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - HR Application(CMS)</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="<%=ResolveClientUrl("~/images/favicon.ico")%>" />
+    <script src="<%=ResolveClientUrl("~/Scripts/jquery/jquery.min.js")%>" type="text/javascript"></script>
+    <script src="<%=ResolveClientUrl("~/Scripts/jquery/popper.min.js")%>"></script>
+    
+    <link href="<%=ResolveClientUrl("~/fonts/fontawesome/css/all.css")%>" rel="stylesheet">
+    <link href="<%=ResolveClientUrl("~/fonts/wseIcon/style.css")%>" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900|Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
+    <link href="<%=ResolveClientUrl("~/css/sweetalert.css")%>" rel="stylesheet" />
+    <link rel="stylesheet" href="<%=ResolveClientUrl("~/css/bootstrap.min.css")%>">
+    <script src="<%=ResolveClientUrl("~/Scripts/bootstrap/bootstrap.min.js")%>"></script>
+
+    <link href="<%=ResolveClientUrl("~/css/_home.css")%>" rel="stylesheet" />
+    <link href="<%=ResolveClientUrl("~/css/_cms.css")%>" rel="stylesheet" />
+
+    <asp:ContentPlaceHolder ID="cphHead" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div id="wrapper" class="animate cms__content">
+        <nav class="navbar header-top fixed-top navbar-expand-lg navbar-expand-md navbar-light bg-white">
+            <button class="nav-list-desktop rd-navbar-project-hamburger ml-lg-3 ml-md-3 ml-sm-0 ml-3 d-lg-block d-md-block d-sm-none d-none" type="button">
+                <span class="project-hamburger">
+                    <span class="project-hamburger-line"></span>
+                    <span class="project-hamburger-line"></span>
+                    <span class="project-hamburger-line"></span>
+                    <span class="project-hamburger-line"></span>
+                </span>
+            </button>
+            <div class="container">
+                <a class="navbar-brand wse-logo text-uppercase pl-lg-0 pl-md-0 pl-sm-2 pl-2" href="<%= ResolveClientUrl("~/Home") %>"><i class="fas fa-chevron-circle-left pr-1"></i>go to hr Application</a>
+                <button class="navbar-toggler rd-navbar-project-hamburger d-lg-none d-md-none d-sm-block d-block" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="project-hamburger">
+                        <span class="project-hamburger-line"></span>
+                        <span class="project-hamburger-line"></span>
+                        <span class="project-hamburger-line"></span>
+                        <span class="project-hamburger-line"></span>
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+
+                    <ul class="navbar-nav ml-md-auto d-md-flex navbar-nav-text">
+                        <li class="nav-item text-uppercase text-lg-right text-md-right text-sm-center text-center">
+                            <h1>CMS</h1>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ml-md-auto d-md-flex navbar-icon">
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase cursor__default" href="#">
+                                <b class="d-lg-inline d-md-none d-sm-none d-none">
+                                    <asp:Label ID="lblUserName" runat="server"></asp:Label>
+                                </b>
+                                 <asp:Image ID="ImagePro" CssClass="rounded-circle img__people" runat="server"></asp:Image>
+                                <span class="d-lg-none d-md-none d-sm-block d-block">
+                                    <b>
+                                        <asp:Label ID="lblUserNameSM" runat="server"></asp:Label>
+                                    </b>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav animate side-nav">
+                        <li id="hrApp" class="nav-item d-lg-block d-md-block d-sm-none d-none">
+                            <a class="nav-link text-uppercase link-blog-wse" href="<%= ResolveClientUrl("~/Home") %>" data-toggle="tooltip" title="Go to HR Application" data-placement="right"><i class="fas fa-chevron-circle-left"></i><span class="text__menu">HR Application</span><i class="fas fa-chevron-circle-left shortmenu animate pr-0 d-lg-block d-md-block d-sm-none d-none"></i></a>
+                        </li>
+                        <li id="home" class="nav-item">
+                            <a class="nav-link text-uppercase link-blog-wse" href="<%= ResolveClientUrl("~/CMS") %>" data-toggle="tooltip" title="CMS Home" data-placement="right"><i class="fas fa-home"></i><span class="text__menu">CMS Home</span><i class="fas fa-home shortmenu animate pr-0 d-lg-block d-md-block d-sm-none d-none"></i></a>
+                        </li>
+                        <li id="announcement" class="nav-item">
+                            <a class="nav-link text-uppercase link-blog-wse" href="<%= ResolveClientUrl("~/CMS/CompanyDirectory") %>" data-toggle="tooltip" title="Company Directory" data-placement="right"><i class="fas fa-building"></i><span class="text__menu">Company Directory</span><i class="fas fa-building shortmenu animate pr-0 d-lg-block d-md-block d-sm-none d-none"></i></a>
+                        </li>
+                        <li id="training" class="nav-item">
+                            <a class="nav-link text-uppercase link-blog-wse" href="<%= ResolveClientUrl("~/CMS/Training") %>" data-toggle="tooltip" title="Training" data-placement="right"><i class="fab fa-leanpub"></i><span class="dtext__menu">Training</span><i class="fab fa-leanpub shortmenu animate pr-0 d-lg-block d-md-block d-sm-none d-none"></i></a>
+                        </li>
+                        <li id="point" class="nav-item">
+                            <a class="nav-link text-uppercase link-blog-wse" href="<%= ResolveClientUrl("~/CMS/Point") %>" data-toggle="tooltip" title="Point" data-placement="right"><i class="fas fa-medal"></i><span class="text__menu">Point</span><i class="fas fa-medal shortmenu animate pr-0 d-lg-block d-md-block d-sm-none d-none"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase" href="<%= ResolveClientUrl("~/Logout") %>" data-toggle="tooltip" title="Logout" data-placement="right"><i class="fas fa-sign-out-alt"></i><span class="text__menu">logout</span><i class="fas fa-sign-out-alt shortmenu animate pr-0 d-lg-block d-md-block d-sm-none d-none"></i></a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+        <form id="formCMS" runat="server" enctype="multipart/form-data" autocomplete="off">
+            <asp:ContentPlaceHolder ID="cphBody" runat="server">
+            </asp:ContentPlaceHolder>
+        </form>
+
+        <div class="container-fluid px-0">
+            <section>
+                <div class="container py-5">
+                    <div class="col-12 text-center t-footer">
+                        Copyright ©  <%: DateTime.Now.Year %> - <b>HR Application</b> Wall Street English - Thailand. All rights reserved.
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
+</body>
+
+<asp:ContentPlaceHolder ID="cphFooter" runat="server">
+
+</asp:ContentPlaceHolder>
+</html>
